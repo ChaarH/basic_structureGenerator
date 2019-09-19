@@ -42,6 +42,7 @@ class basic_structureGenerator {
 	private function createControllers(Array $arrayName, $sizeArray)
 	{
 		for ($i=0; $i < $sizeArray; $i++) { 
+			ucfirst(strtolower($arrayName[$i]));
 
 			$content = "<?php"
 					 . PHP_EOL
@@ -72,7 +73,7 @@ class basic_structureGenerator {
 
 			for ($j=0; $j < $sizeFilesToCreate; $j++) { 
 
-				$newFile = $filesToCreate[$j].$arrayName[$i].".php";
+				$newFile = $filesToCreate[$j].strtolower($arrayName[$i]).".php";
 				$content = "<title>" . $filesToCreate[$j].$arrayName[$i] . "</title>";
 
 				$file       = fopen($newFile, "w");
