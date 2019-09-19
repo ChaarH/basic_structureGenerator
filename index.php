@@ -6,8 +6,8 @@
 * verify that the files were created
 */
 
-require "htmlGenerator.php";
+require "basic_structureGenerator.php";
 
 $filesToCreate = ['users', 'clients', 'pacients'];
 
-$form = new htmlGenerator($filesToCreate);
+$form = new basic_structureGenerator($filesToCreate);

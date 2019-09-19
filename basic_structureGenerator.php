@@ -23,11 +23,23 @@ class basic_structureGenerator {
 		$this->files     = $arrayName;
 		$this->sizeArray = count($arrayName);
 		
+		self::createFolders();
 		self::createControllers($this->files, $this->sizeArray);
 		self::createCRUD($this->files, $this->sizeArray);
 	}
 
-	public function createControllers(Array $arrayName, $sizeArray)
+	private function createFolders()
+	{
+		if (!file_exists("Controllers")) {
+			mkdir("Controllers");
+		}
+
+		if (!file_exists("Views")) {
+			mkdir("Views");
+		}	
+	}
+
+	private function createControllers(Array $arrayName, $sizeArray)
 	{
 		for ($i=0; $i < $sizeArray; $i++) { 
 
