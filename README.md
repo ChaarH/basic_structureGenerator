@@ -5,4 +5,4 @@ Who has never needed to create multiple files that are part of a CRUD? And there
 
 This simple script is intended to create these files based on the objects they will add to the _construct () Array.
 
-Feel free to improve and modify;)
+Feel free to improve and modify ;)
