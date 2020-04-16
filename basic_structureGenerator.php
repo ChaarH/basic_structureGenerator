@@ -66,7 +66,7 @@ class basic_structureGenerator {
 
 	public function createCRUD(Array $arrayName, $sizeArray)
 	{
-		$filesToCreate     = ["add_","list_","edit_","delete_"];
+		$filesToCreate     = ["add_","list_","edit_"];
 		$sizeFilesToCreate = count($filesToCreate);
 
 		for ($i=0; $i < $sizeArray; $i++) { 
